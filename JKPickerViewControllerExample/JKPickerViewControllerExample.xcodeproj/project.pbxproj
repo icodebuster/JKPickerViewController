@@ -21,6 +21,8 @@
 		487C342118E99B38008F65EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487C340318E99B37008F65EC /* UIKit.framework */; };
 		487C342918E99B38008F65EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 487C342718E99B38008F65EC /* InfoPlist.strings */; };
 		487C342B18E99B38008F65EC /* JKPickerViewControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C342A18E99B38008F65EC /* JKPickerViewControllerExampleTests.m */; };
+		487C343818E99CB6008F65EC /* JKComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487C343518E99CB6008F65EC /* JKComponents.storyboard */; };
+		487C343918E99CB6008F65EC /* JKPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487C343718E99CB6008F65EC /* JKPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		487C342618E99B38008F65EC /* JKPickerViewControllerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JKPickerViewControllerExampleTests-Info.plist"; sourceTree = "<group>"; };
 		487C342818E99B38008F65EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		487C342A18E99B38008F65EC /* JKPickerViewControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKPickerViewControllerExampleTests.m; sourceTree = "<group>"; };
+		487C343518E99CB6008F65EC /* JKComponents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JKComponents.storyboard; sourceTree = "<group>"; };
+		487C343618E99CB6008F65EC /* JKPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPickerViewController.h; sourceTree = "<group>"; };
+		487C343718E99CB6008F65EC /* JKPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 		487C33F318E99B37008F65EC = {
 			isa = PBXGroup;
 			children = (
+				487C343418E99CB6008F65EC /* JKPickerViewController */,
 				487C340518E99B37008F65EC /* JKPickerViewControllerExample */,
 				487C342418E99B38008F65EC /* JKPickerViewControllerExampleTests */,
 				487C33FE18E99B37008F65EC /* Frameworks */,
@@ -150,6 +156,17 @@
 				487C342718E99B38008F65EC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		487C343418E99CB6008F65EC /* JKPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				487C343518E99CB6008F65EC /* JKComponents.storyboard */,
+				487C343618E99CB6008F65EC /* JKPickerViewController.h */,
+				487C343718E99CB6008F65EC /* JKPickerViewController.m */,
+			);
+			name = JKPickerViewController;
+			path = ../JKPickerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				487C341818E99B38008F65EC /* Images.xcassets in Resources */,
+				487C343818E99CB6008F65EC /* JKComponents.storyboard in Resources */,
 				487C340A18E99B37008F65EC /* InfoPlist.strings in Resources */,
 				487C341318E99B37008F65EC /* Main.storyboard in Resources */,
 			);
@@ -250,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				487C341618E99B38008F65EC /* ViewController.m in Sources */,
+				487C343918E99CB6008F65EC /* JKPickerViewController.m in Sources */,
 				487C341018E99B37008F65EC /* AppDelegate.m in Sources */,
 				487C340C18E99B37008F65EC /* main.m in Sources */,
 			);
@@ -379,6 +398,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JKPickerViewControllerExample/JKPickerViewControllerExample-Prefix.pch";
 				INFOPLIST_FILE = "JKPickerViewControllerExample/JKPickerViewControllerExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,6 +412,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JKPickerViewControllerExample/JKPickerViewControllerExample-Prefix.pch";
 				INFOPLIST_FILE = "JKPickerViewControllerExample/JKPickerViewControllerExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +477,7 @@
 				487C343018E99B38008F65EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		487C343118E99B38008F65EC /* Build configuration list for PBXNativeTarget "JKPickerViewControllerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +486,7 @@
 				487C343318E99B38008F65EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
