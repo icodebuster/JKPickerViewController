@@ -18,7 +18,7 @@
     IBOutlet UIBarButtonItem *cancelButton;
     IBOutlet UIBarButtonItem *doneButton;
     
-    void(^_completionHandler)(JKPickerViewController *pickerVC, id selectedData);
+    void(^_selectionHandler)(JKPickerViewController *pickerVC, id selectedData);
 }
 
 @property (nonatomic, strong) NSArray *dataSource;
@@ -30,7 +30,7 @@
 
 + (instancetype)picker;
 - (void)showPickerInViewController:(UIViewController *)viewController
-             withCompletionHandler:(void (^)(JKPickerViewController *pickerVC, id selectedData))completionHandler;
+             withSelectionHandler:(void (^)(JKPickerViewController *pickerVC, id selectedData))selectionHandler;
 
 
 #pragma mark - UI Events

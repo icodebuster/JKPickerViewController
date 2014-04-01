@@ -49,10 +49,10 @@
 
 // Showing the pickerview in view.
 - (void)showPickerInViewController:(UIViewController *)viewController
-             withCompletionHandler:(void (^)(JKPickerViewController *pickerVC, id selectedData))completionHandler
+             withSelectionHandler:(void (^)(JKPickerViewController *pickerVC, id selectedData))selectionHandler
 {
     [viewController.view endEditing:YES];
-    _completionHandler = completionHandler;
+    _selectionHandler = selectionHandler;
     self.view.frame = viewController.view.bounds;
     
     [viewController addChildViewController:self];
@@ -102,14 +102,14 @@
 - (IBAction)cancelButtonPressed:(id)sender
 {
     [self hidePickerView];
-    _completionHandler(self, nil);
+    _selectionHandler(self, nil);
 }
 
 // Done Button Pressed
 - (IBAction)doneButtonPressed:(id)sender
 {
     [self hidePickerView];
-    _completionHandler(self, [self selectedData]);
+    _selectionHandler(self, [self selectedData]);
 }
 
 
