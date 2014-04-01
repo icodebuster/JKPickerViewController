@@ -10,7 +10,7 @@ Ready to use PickerViewController
     JKPickerViewController *pickerVC = [JKPickerViewController picker];
     [pickerVC setDataSource:@[simpleDataArray]];
     [pickerVC showPickerInViewController:self
-                   withCompletionHandler:^(JKPickerViewController *pickerVC, id selectedData) {
+                   withSelectionHandler:^(JKPickerViewController *pickerVC, id selectedData) {
                        if (selectedData) {
                            NSLog(@"Selected Data = %@", selectedData);
                        }
@@ -29,8 +29,15 @@ Ready to use PickerViewController
     [pickerVC setDataSource:@[arrayOfDic]];
     [pickerVC setTitleKeyPath:@"month"];
     [pickerVC showPickerInViewController:self
-                   withCompletionHandler:^(JKPickerViewController *pickerVC, id selectedData) {
+                   withSelectionHandler:^(JKPickerViewController *pickerVC, id selectedData) {
                        if (selectedData) {
                            NSLog(@"Selected Data = %@", selectedData);
                        }
                    }];
+
+#### Preselecting a value
+For array
+    [pickerVC setSelectedRowData:@[@"Apr"]];
+
+For array of dictionary
+    [pickerVC setSelectedRowData:@[@{@"id": @"4", @"month": @"Apr"}]];
